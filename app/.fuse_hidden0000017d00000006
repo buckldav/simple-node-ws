@@ -1,0 +1,14 @@
+<form>
+    <input type="text" name="message">
+</form>
+<ul id="messages"></ul>
+
+<script>
+    const ws = new WebSocket("ws://localhost:8080");
+    const form = document.querySelector("form");
+    form.onsubmit = (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        ws.send(JSON.stringify(data));
+    }
+</script>
