@@ -37,11 +37,7 @@
 
 <script>
     // Prompt for the client's username
-    const usernameIn = window.prompt("Please enter your name (alphanumeric only):");
-    function stripInvalidCharacters(inputString) {
-        return inputString.replace(/[^A-Za-z0-9\s]/g, '').substring(0, 50);
-    }
-    const username = stripInvalidCharacters(usernameIn);
+    const username = window.prompt("Please enter your name:");
 
     // Check if the username is provided
     if (!username) {

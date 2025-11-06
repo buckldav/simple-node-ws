@@ -41,7 +41,7 @@
     function stripInvalidCharacters(inputString) {
         return inputString.replace(/[^A-Za-z0-9\s]/g, '').substring(0, 50);
     }
-    const username = stripInvalidCharacters(usernameIn);
+    const username = stripInvalidCharacters(originalString);
 
     // Check if the username is provided
     if (!username) {
